@@ -7,7 +7,7 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-nscope = { git = "https://github.com/nLabs-nScope/nscope-rs", branch = "main" }
+nscope = { git = "https://github.com/nLabs-nScope/nscope-rs", branch = "david/trigger_v2" }
 env_logger = "0.10.1"
 
 [dependencies.neon]

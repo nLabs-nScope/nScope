@@ -53,9 +53,7 @@ export function update(triggerState) {
 getId('trigger-onoff').onclick = function () {
     let checked = this.classList.contains("active");
     nscope.setTriggerOn(nScope, checked);
-    if(checked) {
-        nscope.restartTraces(nScope);
-    }
+    nscope.restartTraces(nScope);
 }
 
 for (let button of document.querySelectorAll('input[name=trigger-source]')) {
