@@ -37,13 +37,6 @@ pub fn get_trigger_status(mut cx: FunctionContext) -> JsResult<JsObject> {
     if let Some(nscope) = &nscope_handle.device {
         if nscope.is_connected() {
             disable_ui = cx.boolean(false);
-
-            // TODO: remove this when support for variable sample rates is introduced
-            if let Ok(version) = nscope.version() {
-                if version > 0x00FF {
-                    disable_ui = cx.boolean(true);
-                }
-            }
         }
     }
 
